@@ -27,6 +27,12 @@ Related: [FrontEnd Technology & Libraries](../../FrontEnd/Technology-Libraries.m
 
 This is a working admin + runtime localization feature for product UI strings. It is **not** documented here as full multi-tenant translation packs or complete coverage of every UI string.
 
+## Screenshot
+
+![Manage Language](../../assets/screenshots/manage-language/manage-language.png)
+
+See [manage-language screenshot](../../assets/screenshots/manage-language/README.md).
+
 ## Evidence
 
 - `API/src/Host/Controllers/Localization/LocalizationController.cs`

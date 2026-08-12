@@ -93,6 +93,8 @@ Details live under [API](./API/README.md) and [FrontEnd](./FrontEnd/README.md).
 
 Permission-aware administration and the shared Orbit grid pattern:
 
+![Manage Tenants](./assets/screenshots/manage-tenants/manage-tenants.png)
+
 ![Manage role permissions](./assets/screenshots/manage-roles/manage-role-permissions.png)
 
 ![Manage Users](./assets/screenshots/manage-users/manage-users.png)

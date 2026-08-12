@@ -13,6 +13,14 @@ Related: [API Multi-Tenancy](../../API/MultiTenancy/README.md) · [API Platform 
 - Permissions: `Permissions.Tenants.View` / `Update` — catalog marks these as **Root-only**.
 - APIs via `MultiTenantController` (search/get/update tenant, tenant users, tenant subscriptions, invoice download).
 
+## Screenshots
+
+![Manage Tenants](../../assets/screenshots/manage-tenants/manage-tenants.png)
+
+![Edit Tenant — Subscription Details](../../assets/screenshots/manage-tenants-edit/subscription-details.png)
+
+More: [Manage Tenants](../../assets/screenshots/manage-tenants/README.md) · [Edit Tenant tabs](../../assets/screenshots/manage-tenants-edit/README.md) · [Administrator submenu](../../assets/screenshots/administrator-submenu/README.md)
+
 ## Creation model (factual)
 
 There is **no** in-app “Add Tenant” HTTP/UI path for operators. Tenants are created by **seed** (Root) and by **self-registration** flows that provision a tenant. Admin UI focuses on view/update and subscription/user inspection.

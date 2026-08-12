@@ -43,6 +43,8 @@ This is intentionally **not** a single "multi-tenant middleware" feature — iso
 - **Operator UI** — Root Manage Tenants (grid + edit tabs for details, subscriptions, tenant users) is documented under [FrontEnd Tenant Administration](../../FrontEnd/Tenant-Administration/README.md). Tenant creation for operators is seed/registration-driven (no in-app Add Tenant API).
 - Platform/subscription context: [Platform Foundation](../Platform-Foundation/README.md).
 
+Screenshot: [Manage Tenants](../../assets/screenshots/manage-tenants/README.md) · [Edit Tenant tabs](../../assets/screenshots/manage-tenants-edit/README.md)
+
 ## Evidence
 
 - `API/src/Infrastructure/Nexus/Identity/TokenService.cs`

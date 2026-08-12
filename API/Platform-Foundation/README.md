@@ -35,6 +35,8 @@ Common dropdown/reference values are not reinvented per module. Two parallel cat
 
 FrontEnd consumption: [State](../../FrontEnd/State/README.md) (`DropDownService`, not Redux).
 
+Screenshot: [Manage Nexus Lookups](../../assets/screenshots/manage-nexus-lookups/README.md)
+
 ## Lifecycle sketch (verified)
 
 ```text
@@ -51,6 +53,8 @@ Tenant created (seed or registration)
 - **No Host controller** for full subscription-catalog CRUD (service-level helpers may exist without a public admin API).
 - Some buy-plan marketing bullets on the FrontEnd are **hardcoded**, not loaded from the database.
 - Purchase CTA behavior can depend on current plan expiry rules.
+
+Screenshot: [My Subscriptions](../../assets/screenshots/my-subscriptions/README.md) · [Edit Tenant — Subscription Details](../../assets/screenshots/manage-tenants-edit/README.md)
 
 ## Evidence
 
