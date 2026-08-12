@@ -21,8 +21,8 @@ React SPA documentation for the product UI that consumes the Clean Architecture 
 | `src/helpers/api/` | Session helpers, authenticated fetch, NSwag clients |
 | `src/services/` | Thin wrappers over generated API clients |
 | `src/redux/` | Auth workflows + layout chrome state |
-| `src/pages/orbit/` | Product features (users, roles, tenants, appointments, forms, â€¦) |
-| `src/pages/{auth,ui,apps,â€¦}/` | Auth screens and template/demo surfaces |
+| `src/pages/orbit/` | Product features (users, roles, tenants, appointments, forms, …) |
+| `src/pages/{auth,ui,apps,…}/` | Auth screens and template/demo surfaces |
 | `src/components/` / `src/hooks/` | Shared UI and hooks (permissions, idle timeout, â€¦) |
 
 ### How the pieces connect
@@ -40,19 +40,26 @@ See [Technology-Libraries.md](./Technology-Libraries.md).
 
 | Section | Focus |
 |---------|--------|
-| [Authentication](./Authentication/README.md) | Session storage, refresh single-flight, 401/403, idle warning |
+| [Authentication](./Authentication/README.md) | Session storage, refresh single-flight, 401/403, idle warning, 2FA client |
+| [Security](./Security/README.md) | sessionStorage, idle UX, DOMPurify; CSP docs vs hosting enforcement |
 | [Routing](./Routing/README.md) | Public/protected routes, redirects, lazy loading, access UX |
 | [State](./State/README.md) | Redux Toolkit store, Auth saga workflows, Layout state |
 | [UI Architecture](./UI-Architecture/README.md) | Shared components, modals, toasts, module vs shared patterns |
 | [Forms & Validation](./Forms-Validation/README.md) | VerticalForm/FormInput, yup vs server validation |
 | [Grids & Tables](./Grids-Tables/README.md) | AG Grid wrappers, pagination, module column defs |
+| [Tenant-Administration](./Tenant-Administration/README.md) | Root Manage Tenants grid + edit tabs |
 | [Real-Time & Integrations](./RealTime-Integrations/README.md) | SignalR, Jitsi, Stripe, FullCalendar, social login |
+
+Localization (API + FrontEnd) is documented under [API Localization](../API/Localization/README.md).
 
 ## Related API docs
 
 - [API Authentication](../API/Authentication/README.md)
 - [API Authorization](../API/Authorization/README.md)
 - [API Multi-Tenancy](../API/MultiTenancy/README.md)
+- [API Platform Foundation](../API/Platform-Foundation/README.md)
+- [API Mailing](../API/Mailing/README.md)
+- [API Security](../API/Security/README.md)
 
 Diagrams: [Single-flight refresh](../assets/diagrams/frontend-single-flight-refresh/README.md) · [Routing / access gating](../assets/diagrams/frontend-routing-gating/README.md)
 

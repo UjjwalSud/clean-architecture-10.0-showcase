@@ -11,6 +11,14 @@ API documentation is generated with NSwag OpenAPI documents and Swagger UI, gate
 - **Controller annotations** — endpoints commonly use `[OpenApiOperation]` (and related NSwag attributes).
 - **UI behavior** — models collapsed by default; tags sorted alphabetically.
 
+## API versioning + OpenAPI
+
+Asp.Versioning (default **1.0**, assume unspecified, report versions, URL substitution) is registered alongside MVC. Most Host controllers are **version-neutral** (`api/[controller]`). Versioned LookUp controllers use `api/v{version}/…`.
+
+NSwag currently generates **one** OpenAPI document for the host — not separate Swagger docs per API version. Clients and operators should treat versioning as a routing/convention capability, not a multi-catalog documentation split.
+
+Evidence: `API/src/Infrastructure/Startup.cs` (`AddApiVersioning`), `VersionNeutralApiController`, `VersionedApiController`, LookUp controllers.
+
 ## Configuration
 
 - Settings: `API/src/Infrastructure/OpenApi/SwaggerSettings.cs`

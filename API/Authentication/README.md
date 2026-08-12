@@ -81,6 +81,35 @@ JWT claims include user identity, tenant id + tenant unique id, IP, and **sessio
 
 Daily Hangfire job purges aged session rows (retention cleanup) — see [Background Jobs](../BackgroundJobs/README.md).
 
+## Two-factor authentication / Authenticator
+
+2FA is implemented as an optional challenge **before** JWT issuance, plus profile-managed enable/disable for Email or Authenticator (TOTP).
+
+### Login challenge
+
+1. After password (or social) validation, if `RequiresTwoFactorAuthentication` is on **and** the user has 2FA enabled → create `ApplicationUserTwoFactorSession` (expiry from `TwoFactorSessionValidForMin`).
+2. Return `RequiresTwoFactor` + `TwoFactorSessionId` (no real access/refresh tokens yet).
+3. Email provider → Hangfire-enqueued email code; Authenticator provider → client collects TOTP from the user's app.
+4. `VerifyTwoFactor` validates the code against the session, then issues the normal session JWT + refresh pair.
+
+### Profile management
+
+- Personal API: get/update 2FA details; generate authenticator QR (`QRCoder` PNG); verify TOTP (`Otp.NET` — Identity's verify path is bypassed where it was unreliable).
+- Types: `None`, `Email`, `Authenticator`. Switching to None clears authenticator key and disables 2FA.
+- FrontEnd: Manage Profile → 2FA panel + enable-authenticator steps; login challenge page for Email/Authenticator codes. See [FrontEnd Authentication](../../FrontEnd/Authentication/README.md).
+
+### Maturity (factual)
+
+| Present | Not claimed |
+|---------|-------------|
+| Email + Authenticator enroll / challenge / verify | Recovery / backup codes |
+| Security events for challenge issuance | Global mandate for all users by default |
+| Packages `Otp.NET` / `QRCoder` on authenticator path | |
+
+`RequiresTwoFactorAuthentication` defaults to **false** in shipped security settings — 2FA is available and profile-manageable; it is not forced for every new user unless that flag is enabled (new users then default toward Email 2FA).
+
+Screenshot of authenticator setup is **intentionally omitted** — QR / shared key material must not be published.
+
 ## UI evidence
 
 Client idle warning corresponding to session-bound auth (Continue refreshes; Log out revokes):
@@ -111,5 +140,8 @@ Documented reason codes include logout, logout-all, password change/reset, user 
 - `API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationUserSession.cs`
 - `API/src/Core/Application/Nexus/Identity/Sessions/UserSessionRevocationReasons.cs`
 - `API/src/Host/Controllers/Identity/TokensController.cs`
+- `API/src/Host/Controllers/Identity/PersonalController.cs` (2FA profile / authenticator)
+- `API/src/Infrastructure/Nexus/Identity/UserService.CreateUpdate.cs` (2FA update / QR / TOTP verify)
+- `API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationUserTwoFactorSession.cs`
 - `API/src/Host/Configurations/security.json`
 - `API/src/Infrastructure/Logging/Security/SecurityEventNames.cs`

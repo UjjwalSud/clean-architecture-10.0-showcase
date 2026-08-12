@@ -17,7 +17,7 @@ Explicit mapping of major backend packages to purpose and verified capability. P
 |---------|---------|-------------------|
 | `Microsoft.AspNetCore.Authentication.JwtBearer` | JWT bearer authentication | API token authentication scheme |
 | `JWT` | JWT create/verify helper | Jitsi meeting token generation |
-| `Otp.NET` / `QRCoder` | TOTP + QR encoding | Authenticator-style 2FA support surfaces |
+| `Otp.NET` / `QRCoder` | TOTP verify + QR PNG | Authenticator 2FA enroll/verify (`UserService` / Personal API) — see [Authentication](./Authentication/README.md) |
 
 ## Jobs, logging, API docs
 
@@ -35,9 +35,9 @@ Explicit mapping of major backend packages to purpose and verified capability. P
 | `Mapster.Core` / `Mapster.DependencyInjection` | Object mapping | DTO/entity mapping in Infrastructure services |
 | `RestSharp` | HTTP client | External HTTP calls (for example Stripe invoice PDF download) |
 | `Newtonsoft.Json` | JSON serialization | Selected serialization paths (including Stripe-related payloads) |
-| `MailKit` | SMTP client | Mail provider path when configured for AWS-style SMTP |
-| `SendGrid` | SendGrid API | Mail provider path when `Provider=SendGrid` |
-| `Resend` | Resend API | Mail provider path when `Provider=Resend` |
+| `MailKit` | SMTP client | Mail provider when `Provider=Aws` (SMTP host) — see [Mailing](./Mailing/README.md) |
+| `SendGrid` | SendGrid API | Mail provider when `Provider=SendGrid` |
+| `Resend` | Resend API | Mail provider when `Provider=Resend` |
 | `AWSSDK.S3` | AWS S3 | File storage when provider is AWS |
 | `Azure.Storage.Blobs` / `Azure.Identity` | Azure Blob (+ managed identity) | File storage when provider is Azure |
 | `Stripe.net` | Stripe API client | Payment intents, subscriptions, webhooks, invoices |
@@ -46,8 +46,8 @@ Explicit mapping of major backend packages to purpose and verified capability. P
 
 | Library | Purpose | Capability enabled |
 |---------|---------|-------------------|
-| `Amazon.Extensions.Configuration.SystemsManager` | AWS config/secrets | Optional external secrets provider |
-| `Azure.Extensions.AspNetCore.Configuration.Secrets` | Azure Key Vault config | Optional external secrets provider |
+| `Amazon.Extensions.Configuration.SystemsManager` | AWS config/secrets | Optional `AwsSecretsManager` external secrets bootstrap |
+| `Azure.Extensions.AspNetCore.Configuration.Secrets` | Azure Key Vault config | Optional `AzureKeyVault` external secrets bootstrap |
 
 ## Framework capabilities (no separate NuGet)
 
@@ -55,7 +55,7 @@ Explicit mapping of major backend packages to purpose and verified capability. P
 |------------|--------|-------------------|
 | SignalR | `Microsoft.AspNetCore.App` | Real-time notifications hub at `/notifications` |
 | Rate limiting | `Microsoft.AspNetCore.RateLimiting` | Named policies (auth, refresh, webhook, etc.) from `ratelimit.json` |
-| API versioning | `Asp.Versioning.Mvc` (+ ApiExplorer) | Default API version `1.0`, URL version substitution |
+| API versioning | `Asp.Versioning.Mvc` (+ ApiExplorer) | Default `1.0`, assume unspecified, URL substitution; most controllers version-neutral — see [API README](./README.md) |
 
 ## Notes (verified limits)
 

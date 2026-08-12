@@ -26,3 +26,5 @@ Real UI captures from the running Clean Architecture application. These are evid
 ---
 
 All screenshots were reviewed for public-safe demo data before inclusion. Demo credentials are never published in this repository.
+
+**Not captured in this pass:** Manage Tenants (local API/FrontEnd were unavailable during capture), authenticator setup (would expose QR/shared key), and Settings (overlapping admin-grid evidence already covered by Users/Roles).

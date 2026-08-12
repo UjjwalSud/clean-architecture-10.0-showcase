@@ -1,6 +1,6 @@
 # API Notifications
 
-Real-time notifications use ASP.NET Core SignalR with an authorized hub and tenant-scoped groups.
+Real-time notifications use ASP.NET Core SignalR with an authorized hub and tenant-scoped groups. Outbound email is a separate pipeline — see [Mailing](../Mailing/README.md).
 
 ## Verified capabilities
 

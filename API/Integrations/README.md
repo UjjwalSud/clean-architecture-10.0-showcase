@@ -1,6 +1,6 @@
 # API Integrations
 
-External integrations currently verified in source: **Stripe** (payments/subscriptions) and **Jitsi** (meeting tokens).
+External integrations currently verified in source: **Stripe** (payments/subscriptions) and **Jitsi** (meeting tokens). Tenant/subscription platform context: [Platform Foundation](../Platform-Foundation/README.md). Outbound email providers are documented under [Mailing](../Mailing/README.md), not here.
 
 ## Stripe
 

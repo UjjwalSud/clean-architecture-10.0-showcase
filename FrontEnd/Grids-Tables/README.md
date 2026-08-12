@@ -34,8 +34,8 @@ Modules still own:
 
 | Wrapper | Typical Orbit usage |
 |---------|---------------------|
-| With pagination | Tenants, email log/templates, forms hierarchy, lookup values, localization lists, â€¦ |
-| Without pagination | Users, roles/permissions, lookup codes, countries, settings lists, assign-roles, â€¦ |
+| With pagination | Tenants ([Tenant Administration](../Tenant-Administration/README.md)), email log/templates, forms hierarchy, lookup values, localization lists, … |
+| Without pagination | Users, roles/permissions, lookup codes, countries, settings lists, assign-roles, … |
 
 ## Active vs legacy table tech
 

@@ -18,6 +18,22 @@ Diagram: [Request / security pipeline](../../assets/diagrams/request-pipeline/RE
 - **Hangfire dashboard hardening** — environment/network/auth-mode gates (documented under Background Jobs).
 - **Health endpoints** — anonymous liveness/readiness; detailed health entry lists are gated (Development + settings).
 
+## External configuration & secrets
+
+Optional Host bootstrap can load configuration from external providers **after** JSON / user-secrets / environment sources (provider values last-win when enabled):
+
+| Provider setting | Behavior |
+|------------------|----------|
+| `None` (default) | Local JSON + User Secrets + environment only |
+| `AzureKeyVault` | Azure Key Vault configuration provider (validated vault URI; credential strategy differs by environment) |
+| `AwsSecretsManager` | AWS Systems Manager / Secrets Manager configuration path (region + secret id required) |
+
+Validation fails fast on misconfiguration. Exact vault names, ARNs, and secret identifiers are **not** published here.
+
+Evidence: `API/src/Host/Configurations/ExternalSecretsConfiguration.cs`, `externalSecrets.json`, Host packages listed in [Technology & Libraries](../Technology-Libraries.md).
+
+Cross-link: browser CSP / SPA session controls live under [FrontEnd Security](../../FrontEnd/Security/README.md) — API headers do **not** set Content-Security-Policy for the SPA origin.
+
 ## Request / security pipeline
 
 Order in `API/src/Infrastructure/Startup.cs` (`UseInfrastructure`):
@@ -71,3 +87,5 @@ Order in `API/src/Infrastructure/Startup.cs` (`UseInfrastructure`):
 - `API/src/Infrastructure/Middleware/ResponseLoggingMiddleware.cs`
 - `API/src/Infrastructure/HealthChecks/Startup.cs`
 - `API/src/Host/Configurations/{httpssecurity,securityheaders,cors,ratelimit,exceptionhandling,middleware}.json`
+- `API/src/Host/Configurations/ExternalSecretsConfiguration.cs`
+- `API/src/Host/Configurations/externalSecrets.json`

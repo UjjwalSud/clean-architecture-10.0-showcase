@@ -6,7 +6,7 @@ Related: [Forms & Validation](../Forms-Validation/README.md) · [Grids & Tables]
 
 ## Verified capabilities
 
-- Shared component barrel for common form/page primitives (`VerticalForm`, `FormInput`, Popup chrome, Pagination, EmptyState, FileUploader, â€¦).
+- Shared component barrel for common form/page primitives (`VerticalForm`, `FormInput`, Popup chrome, Pagination, EmptyState, FileUploader, …).
 - Headless UI wrappers for modal/offcanvas/popover (`ModalLayout` and related layouts).
 - Route-level `ErrorBoundary` around routed content.
 - Central toast/error pipeline via `messageHelper` (+ optional expandable technical toast content).
@@ -43,6 +43,20 @@ See [appointment-modal screenshot](../../assets/screenshots/appointment-modal/RE
 | Complex appointment forms | Page-local `useForm` composition (see Forms) |
 | Settings editors | Sometimes FormInput outside VerticalForm |
 
+## Representative Orbit admin modules
+
+These product screens illustrate shared UI patterns (not separate architecture packages):
+
+| Module | Pattern demonstrated |
+|--------|----------------------|
+| Manage Users / Roles | AG Grid list + VerticalForm CRUD modals |
+| Manage Tenants | Root-only grid + tabbed edit — [Tenant Administration](../Tenant-Administration/README.md) |
+| Manage Settings | Tenant Orbit settings (Appointment / ApprovedAppointment) with nested editors and tabbed landing — forms that are **not** always VerticalForm wrappers |
+| Manage Language | Localization admin — see [API Localization](../../API/Localization/README.md) |
+| Email Log / Templates | Mail admin surfaces — see [API Mailing](../../API/Mailing/README.md) |
+
+Settings is a real administration feature for appointment-related configuration. It does not introduce a generic “settings framework” beyond service + controller + Orbit UI composition. Sensitive business config values are not documented here.
+
 ## Appointment modal controller (pattern)
 
 Appointments centralize open/close/reload for add/view/reschedule/cancel in a small b-logic package, then render multiple `ModalLayout` hosts. Most other Orbit CRUD pages keep modal open state closer to the page (`useModalState`) rather than extracting a controller.
@@ -61,6 +75,7 @@ Appointments centralize open/close/reload for add/view/reschedule/cancel in a sm
 - `FrontEnd/src/pages/orbit/manage-appointments/b-logic/AppointmentModalState.ts`
 - `FrontEnd/src/pages/orbit/manage-appointments/b-logic/useAppointmentModalController.ts`
 - `FrontEnd/src/pages/orbit/manage-appointments/Components/AppointmentModals.tsx`
+- `FrontEnd/src/pages/orbit/manage-settings/`
 - `FrontEnd/src/hooks/`
 - `FrontEnd/src/routes/Routes.tsx`
 - `FrontEnd/src/App.tsx`

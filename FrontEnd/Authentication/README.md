@@ -72,6 +72,15 @@ Idle-modal "Continue" refreshes through `TokenService` / NSwag (separate from th
 
 More detail: [login screenshot](../../assets/screenshots/login/README.md) · [session timeout screenshot](../../assets/screenshots/session-timeout/README.md)
 
+## Two-factor authentication (client)
+
+- Login saga detects `requiresTwoFactor` / `twoFactorSessionId` and routes to the 2FA challenge screen.
+- Challenge UI supports Email (request/resend code) and Authenticator (6-digit TOTP) via Auth/Token services.
+- **Manage Profile** includes `UserTwoFactorAuthentication` (enable/disable, choose Email vs Authenticator) and `EnableAuthenticator` (QR + shared-key entry + verify).
+- Backend remains authoritative for challenge sessions, codes, and authenticator key storage — see [API Authentication — 2FA](../../API/Authentication/README.md).
+
+Recovery codes are not part of the verified client flow. Authenticator setup screenshots are omitted (they expose setup secrets).
+
 ## Configuration
 
 - `FrontEnd/src/config.ts` reads `VITE_API_URL` / `VITE_LOCAL_API_URL`.
@@ -90,4 +99,8 @@ More detail: [login screenshot](../../assets/screenshots/login/README.md) · [se
 - `FrontEnd/src/components/SessionTimeoutModal.tsx`
 - `FrontEnd/src/redux/auth/saga.ts`
 - `FrontEnd/src/layouts/Vertical.tsx`
+- `FrontEnd/src/pages/auth/TwoFactorAuthentication.tsx`
+- `FrontEnd/src/pages/orbit/manage-profile/Components/UserTwoFactorAuthentication.tsx`
+- `FrontEnd/src/pages/orbit/manage-profile/Components/EnableAuthenticator.tsx`
+- `FrontEnd/src/redux/auth/saga.ts`
 - `FrontEnd/src/config.ts`

@@ -8,7 +8,7 @@ The underlying implementation is intentionally private. This repository focuses 
 
 ## Development acceleration
 
-The private foundation already solves common infrastructure concerns (authentication/session security, authorization, multi-tenancy, persistence, jobs, caching, file storage, integrations, observability, and shared FrontEnd patterns). New product work can start from those established patterns instead of rebuilding the same platform pieces for every application, and focus sooner on domain and business requirements. It is suitable as a starting architecture for SaaS and business applications.
+The private foundation already solves common infrastructure concerns (authentication/session security including optional 2FA, authorization, multi-tenancy and subscription-aware platform pieces, persistence, jobs, caching, file storage, multi-provider email, integrations, observability, localization hooks, and shared FrontEnd patterns). New product work can start from those established patterns instead of rebuilding the same platform pieces for every application, and focus sooner on domain and business requirements. It is suitable as a starting architecture for SaaS and business applications.
 
 ## Architecture
 
@@ -63,15 +63,17 @@ Evidence paths throughout this showcase (for example `API/src/...`, `FrontEnd/sr
 |------|---------------------|
 | Backend | .NET 10 Clean Architecture (Domain / Application / Infrastructure / Host) |
 | FrontEnd | React 19 + TypeScript SPA (Vite), NSwag clients, Redux Toolkit + Saga |
-| Authentication | Session-bound JWT, refresh-token hashing + rotation, reuse revocation, idle/absolute timeouts |
+| Authentication | Session-bound JWT, refresh-token hashing + rotation, reuse revocation, idle/absolute timeouts; optional Email/Authenticator 2FA |
 | Authorization | Permission policies from DB role claims (not JWT-embedded permissions) |
-| Multi-tenancy | Multi-layer isolation (token, session, EF Application filter, Nexus service filters, cache keys, SignalR groups) |
+| Multi-tenancy / SaaS foundation | Multi-layer isolation plus tenant admin, default/free subscription assignment, Stripe upgrade path |
 | Persistence | EF Core, multi-DbContext layout, soft delete, auditing; SQL Server migrations shipped |
 | Background jobs | Hangfire on SQL Server storage (filters, recurring session purge) |
 | Caching | Local / distributed-memory cache with tenant-prefixed keys (Redis wiring present but not active) |
-| Security | HTTPS/HSTS, security headers, CORS allowlists, rate limiting, request pipeline hardening |
-| API surface | OpenAPI / NSwag, thin controllers over Application service interfaces |
+| Security | HTTPS/HSTS, security headers, CORS allowlists, rate limiting; optional Azure Key Vault / AWS secrets providers; FrontEnd sessionStorage + idle UX (CSP via hosting docs) |
+| API surface | OpenAPI / NSwag, thin controllers; Asp.Versioning (mostly version-neutral routes) |
 | Integrations | Stripe payments, Jitsi meetings, file storage providers (local / S3 / Azure Blob) |
+| Email | Multi-provider mailing (SendGrid / Resend / SMTP), Hangfire enqueue, email logs |
+| Localization | Country + string catalog API with i18next FrontEnd runtime |
 | Real-time | SignalR notifications hub (FrontEnd hub connect exists; dropdown UI not yet consuming events) |
 | AI engineering | Project `.cursor` rules/docs/prompts — governed, plan-first assistance |
 
@@ -81,8 +83,8 @@ Details live under [API](./API/README.md) and [FrontEnd](./FrontEnd/README.md).
 
 | Section | Contents |
 |---------|----------|
-| [API](./API/README.md) | Backend architecture, security, authz, persistence, jobs, integrations |
-| [FrontEnd](./FrontEnd/README.md) | SPA architecture, session client, routing, state, UI patterns |
+| [API](./API/README.md) | Backend architecture, security, authz, tenancy/SaaS foundation, mailing, persistence, jobs |
+| [FrontEnd](./FrontEnd/README.md) | SPA architecture, session client, security posture, routing, tenant admin, UI patterns |
 | [Cursor / AI Engineering](./Cursor/README.md) | How Cursor is governed for this codebase |
 | [Architecture diagrams](./assets/diagrams/README.md) | Mermaid flow and dependency diagrams |
 | [Screenshots](./assets/screenshots/README.md) | Real UI evidence from the running application |

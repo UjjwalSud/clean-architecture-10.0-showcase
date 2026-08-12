@@ -22,10 +22,12 @@ Related: [UI Architecture](../UI-Architecture/README.md) · [Authentication](../
 | VerticalForm + FormInput, little/no yup | Most Orbit CRUD modals (users, roles, tenants, forms, lookups, language, email templates, profile, …) |
 | VerticalForm + yupResolver | Login/register/password/lock/2FA (+ auth2); some template apps |
 | Raw useForm + FormInput | Appointment modal forms with richer nested controls ([screenshot](../../assets/screenshots/appointment-modal/README.md)) |
-| FormInput without VerticalForm | Selected settings views / filter controls |
+| FormInput without VerticalForm | Selected settings views / filter controls ([Manage Settings](../UI-Architecture/README.md)) |
 | Template UI demos | `pages/ui/forms/*` (not Orbit product standard) |
 
 **Honest note:** yup is installed and used, but Orbit business forms rely heavily on HTML constraints + API validation feedback rather than shared client schema libraries.
+
+Settings (Appointment / ApprovedAppointment) is a representative Orbit admin module with nested editors — not a second forms framework.
 
 ## Server error rendering
 
@@ -39,5 +41,6 @@ Related: [UI Architecture](../UI-Architecture/README.md) · [Authentication](../
 - `FrontEnd/src/helpers/asyncToast.helper.ts`
 - `FrontEnd/src/pages/auth/Login.tsx` (and related auth forms)
 - `FrontEnd/src/pages/orbit/manage-users/` (representative VerticalForm CRUD)
+- `FrontEnd/src/pages/orbit/manage-settings/` (nested settings editors)
 - `FrontEnd/src/pages/orbit/manage-appointments/Components/` (raw useForm examples)
 - `FrontEnd/package.json` (`react-hook-form`, `yup`, `@hookform/resolvers`)

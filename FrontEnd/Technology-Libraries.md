@@ -49,7 +49,7 @@ NSwag generation config: `FrontEnd/src/helpers/api/GenerateWebApiClient.nswag` (
 | @microsoft/signalr | Realtime | Notification hub hook/UI |
 | @jitsi/react-sdk | Meetings | Start-meeting UI |
 | @stripe/stripe-js / @stripe/react-stripe-js | Payments | Subscription checkout flows |
-| i18next / react-i18next | Localization | Locale switching and Orbit translations |
+| i18next / react-i18next | Localization | Locale switching + Orbit translations — see [API Localization](../API/Localization/README.md) |
 | @fullcalendar/* | Calendar | Appointment calendar views |
 | @react-oauth/google / react-facebook-login | Social login UI | Auth social login forms |
 

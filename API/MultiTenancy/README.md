@@ -2,7 +2,7 @@
 
 Tenant isolation is applied at **multiple layers**: JWT/session context, session validation, EF filters on Application data, manual Nexus filters, optional per-tenant Application databases, cache keys, and SignalR groups.
 
-Related: [Authentication](../Authentication/README.md) · [Authorization](../Authorization/README.md) · [Persistence](../Persistence/README.md) · [Security](../Security/README.md)
+Related: [Authentication](../Authentication/README.md) · [Authorization](../Authorization/README.md) · [Persistence](../Persistence/README.md) · [Security](../Security/README.md) · [Platform Foundation](../Platform-Foundation/README.md) · [FrontEnd Tenant Administration](../../FrontEnd/Tenant-Administration/README.md)
 
 Diagram: [Multi-tenant isolation layers](../../assets/diagrams/tenant-isolation-layers/README.md)
 
@@ -29,7 +29,7 @@ Diagram: [Multi-tenant isolation layers](../../assets/diagrams/tenant-isolation-
 | Nexus DB | Soft-delete filter only; tenant isolation via query filters in services |
 | Roles / permissions | Tenant-prefixed role names + tenant-filtered role APIs |
 | Optional DB split | Per-tenant Application `ConnectionString` at initialization |
-| Cache | `{tenantUniqueId}-â€¦` key prefix by default |
+| Cache | `{tenantUniqueId}-…` key prefix by default |
 | Realtime | Tenant-specific SignalR groups |
 
 This is intentionally **not** a single "multi-tenant middleware" feature — isolation depends on the correct combination of these layers.
@@ -40,6 +40,8 @@ This is intentionally **not** a single "multi-tenant middleware" feature — iso
 - Root tenant is special-cased for inactive-tenant checks in login/session validation.
 - Login rejects inactive non-root tenants before issuing tokens.
 - Session capture stores tenant at session creation time for later mismatch detection.
+- **Operator UI** — Root Manage Tenants (grid + edit tabs for details, subscriptions, tenant users) is documented under [FrontEnd Tenant Administration](../../FrontEnd/Tenant-Administration/README.md). Tenant creation for operators is seed/registration-driven (no in-app Add Tenant API).
+- Platform/subscription context: [Platform Foundation](../Platform-Foundation/README.md).
 
 ## Evidence
 
