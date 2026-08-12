@@ -91,13 +91,49 @@ Details live under [API](./API/README.md) and [FrontEnd](./FrontEnd/README.md).
 
 ## UI evidence
 
-Permission-aware administration and the shared Orbit grid pattern:
+Real UI captures from the running application. Each image also has a short write-up under [assets/screenshots](./assets/screenshots/README.md).
 
-![Manage Tenants](./assets/screenshots/manage-tenants/manage-tenants.png)
+### Administration
+
+![Administrator submenu](./assets/screenshots/administrator-submenu/administrator-submenu.png)
+
+[Administrator submenu](./assets/screenshots/administrator-submenu/README.md)
+
+![Manage Users](./assets/screenshots/manage-users/manage-users.png)
+
+[Manage Users](./assets/screenshots/manage-users/README.md)
+
+![Manage Roles](./assets/screenshots/manage-roles/manage-roles.png)
 
 ![Manage role permissions](./assets/screenshots/manage-roles/manage-role-permissions.png)
 
-![Manage Users](./assets/screenshots/manage-users/manage-users.png)
+[Manage Roles](./assets/screenshots/manage-roles/README.md)
+
+![Manage Language](./assets/screenshots/manage-language/manage-language.png)
+
+[Manage Language](./assets/screenshots/manage-language/README.md)
+
+![Manage Nexus Lookups](./assets/screenshots/manage-nexus-lookups/manage-nexus-lookups.png)
+
+[Manage Nexus Lookups](./assets/screenshots/manage-nexus-lookups/README.md)
+
+![Manage Tenants](./assets/screenshots/manage-tenants/manage-tenants.png)
+
+[Manage Tenants](./assets/screenshots/manage-tenants/README.md)
+
+![Edit Tenant — Tenant Details](./assets/screenshots/manage-tenants-edit/tenant-details.png)
+
+![Edit Tenant — Subscription Details](./assets/screenshots/manage-tenants-edit/subscription-details.png)
+
+![Edit Tenant — Tenant Users](./assets/screenshots/manage-tenants-edit/tenant-users.png)
+
+[Edit Tenant tabs](./assets/screenshots/manage-tenants-edit/README.md)
+
+### Subscriptions
+
+![My Subscriptions](./assets/screenshots/my-subscriptions/my-subscriptions.png)
+
+[My Subscriptions](./assets/screenshots/my-subscriptions/README.md)
 
 Full gallery: [assets/screenshots](./assets/screenshots/README.md)
 
