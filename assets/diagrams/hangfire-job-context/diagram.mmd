@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant API as HTTP request
+  participant F as SystemJobFilter
+  participant Q as Hangfire storage
+  participant A as SystemJobActivator
+  participant J as Job method
+
+  API->>F: Enqueue while HttpContext exists
+  F->>F: Capture userId tenantId tenantUniqueId
+  F->>Q: Persist job plus parameters
+  Note over F: No HttpContext means parameters are skipped
+  Q->>A: Perform job
+  A->>A: SetCurrentUserId and SetCurrentTenant
+  A->>J: Execute with request-like current user

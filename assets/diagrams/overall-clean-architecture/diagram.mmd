@@ -1,0 +1,20 @@
+flowchart TB
+  FE["FrontEnd SPA"]
+  Host["Host"]
+  Infra["Infrastructure"]
+  App["Application"]
+  Domain["Domain"]
+  Shared["Shared"]
+  Mssql["Migrators.MSSQL"]
+
+  FE -.->|"HTTP + JWT"| Host
+  Host --> App
+  Host --> Infra
+  Host --> Mssql
+  Mssql --> Infra
+  Infra --> App
+  Infra --> Domain
+  Infra --> Shared
+  App --> Domain
+  App --> Shared
+  Domain --> Shared

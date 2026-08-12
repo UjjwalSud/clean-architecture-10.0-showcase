@@ -1,0 +1,25 @@
+sequenceDiagram
+  participant C as Client
+  participant T as Tokens refresh
+  participant S as Session service
+  participant DB as User session row
+
+  C->>T: POST refresh access + refresh tokens
+  T->>T: Parse access JWT lifetime ignored
+  T->>S: ValidateSession updateActivity false
+  alt Session invalid
+    S-->>C: Reject no rotation
+  else Session valid
+    T->>DB: Load refresh hash and expiry
+    alt Hash mismatch
+      T->>S: Revoke RefreshTokenReuse
+      T-->>C: Reject
+    else Hash matches
+      T->>DB: Rotate hash concurrency token
+      alt Save concurrency conflict
+        T-->>C: Reject without revoke
+      else Saved
+        T-->>C: New access + refresh pair
+      end
+    end
+  end

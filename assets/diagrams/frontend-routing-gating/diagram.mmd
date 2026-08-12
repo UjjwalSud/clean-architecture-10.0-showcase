@@ -1,0 +1,23 @@
+flowchart TD
+  hit[Route match]
+  pub{Public route list?}
+  def[DefaultLayout]
+  sess{APICore authenticated?}
+  vert[VerticalLayout page]
+  login[Redirect login]
+  unauth[Redirect unauthorized logout]
+  page[Page may call API]
+  api{API result}
+  ok[Render data]
+  denied[403 to AccessDenied]
+  note[Menu usePermission is UX only]
+
+  hit --> pub
+  pub -->|yes| def
+  pub -->|no| sess
+  sess -->|yes| vert --> page --> api
+  sess -->|refresh still valid? no| unauth
+  sess -->|no session| login
+  api -->|authorized| ok
+  api -->|403| denied
+  vert -.-> note

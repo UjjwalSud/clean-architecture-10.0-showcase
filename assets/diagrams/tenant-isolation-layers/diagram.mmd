@@ -1,0 +1,32 @@
+flowchart TB
+  subgraph tokenLayer [Token]
+    jwt[JWT tenant id + unique id + sid]
+  end
+  subgraph sessionLayer [Session]
+    sess[Validate tenant match and tenant active]
+  end
+  subgraph requestLayer [Request]
+    cu[CurrentUser tenant accessors]
+  end
+  subgraph appDb [Application DB]
+    efg[EF global filter TenantId]
+  end
+  subgraph nexusDb [Nexus DB]
+    svc[Service-level tenant predicates]
+    roles[Tenant-prefixed roles]
+  end
+  subgraph optionalDb [Optional]
+    cs[Per-tenant Application connection]
+  end
+  subgraph cacheRt [Cache and realtime]
+    keys[Tenant-prefixed cache keys]
+    groups[Tenant-specific SignalR groups]
+  end
+
+  jwt --> sess --> cu
+  cu --> efg
+  cu --> svc
+  cu --> roles
+  cu --> cs
+  cu --> keys
+  cu --> groups

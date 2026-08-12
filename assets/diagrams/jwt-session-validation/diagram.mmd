@@ -1,0 +1,21 @@
+flowchart TD
+  client[Client with access JWT]
+  jwt[Validate signature / issuer / audience<br/>ClockSkew zero]
+  logout{Logout path?}
+  sid[Extract sid + user id]
+  db[Load ApplicationUserSession]
+  checks{Session valid?}
+  fail[Fail authentication]
+  act{Not /notifications?}
+  bump[Throttle last-activity update]
+  ok[Request continues]
+
+  client --> jwt --> logout
+  logout -->|yes skip session check| ok
+  logout -->|no| sid --> db --> checks
+  checks -->|missing / revoked / inactive user| fail
+  checks -->|tenant mismatch or inactive| fail
+  checks -->|absolute or idle timeout| fail
+  checks -->|valid| act
+  act -->|yes| bump --> ok
+  act -->|no| ok

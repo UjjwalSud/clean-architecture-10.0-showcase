@@ -1,0 +1,10 @@
+flowchart LR
+  req[Requirement]
+  scan[Scan architecture and closest module]
+  plan[Module plan when needed]
+  rules[Validate rules and anti-patterns]
+  impl[Scoped implementation]
+  verify[Verify permissions OpenAPI tokens]
+  review[Review before wider change]
+
+  req --> scan --> plan --> rules --> impl --> verify --> review

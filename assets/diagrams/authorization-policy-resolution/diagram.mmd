@@ -1,0 +1,21 @@
+flowchart TD
+  attr[Controller MustHavePermission]
+  name["Policy Permissions.resource.action"]
+  prov[PermissionPolicyProvider]
+  req[PermissionRequirement]
+  jwt[JWT + session already validated]
+  handler[PermissionAuthorizationHandler]
+  svc[HasPermissionAsync]
+  cache[Tenant-prefixed permission cache]
+  db[Role claims in Nexus DB]
+  eval{Exact / OR / AND}
+  allow[Succeed]
+  deny[Deny + security event]
+
+  attr --> name --> prov --> req
+  jwt --> handler
+  req --> handler --> svc --> cache
+  cache -->|miss| db --> cache
+  cache --> eval
+  eval -->|match| allow
+  eval -->|no match| deny

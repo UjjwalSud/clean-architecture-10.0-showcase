@@ -1,0 +1,24 @@
+flowchart TD
+  call[NSwag client authenticatedFetch]
+  auth[Attach Bearer from sessionStorage]
+  resp{HTTP status}
+  ok[Return response]
+  skip{Auth or token URL?}
+  retryHdr{Already retried?}
+  wait[Share in-flight refresh promise]
+  refresh[POST tokens/refresh via window.fetch]
+  upd[Update sessionStorage]
+  retry[Retry original request once]
+  fail[Revoke logout then unauthorized redirect]
+  forbidden[Navigate to access-denied]
+
+  call --> auth --> resp
+  resp -->|2xx / other handled| ok
+  resp -->|403| forbidden
+  resp -->|401| skip
+  skip -->|yes| fail
+  skip -->|no| retryHdr
+  retryHdr -->|yes| fail
+  retryHdr -->|no| wait --> refresh
+  refresh -->|success| upd --> retry --> resp
+  refresh -->|failure| fail

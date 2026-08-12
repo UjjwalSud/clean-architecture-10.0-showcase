@@ -1,0 +1,15 @@
+flowchart TD
+  change[Tracked entity change]
+  save[SaveChangesAsync]
+  stamp[Stamp created / modified / tenant]
+  soft{Deleted and ISoftDelete?}
+  conv[Convert to Modified IsDeleted]
+  trail[Build AuditTrail]
+  redact[Redact sensitive properties]
+  appSave[Persist Application or Nexus data]
+  audSave[Persist Trail in Auditing DB]
+
+  change --> save --> stamp --> soft
+  soft -->|yes| conv --> trail
+  soft -->|no| trail
+  trail --> redact --> appSave --> audSave

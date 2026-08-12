@@ -1,0 +1,11 @@
+stateDiagram-v2
+  [*] --> Active: login or token issue
+  Active --> Active: valid request optional activity bump
+  Active --> Revoked: logout or logout all
+  Active --> Revoked: password change or reset
+  Active --> Revoked: user deactivated
+  Active --> Revoked: tenant mismatch or inactive
+  Active --> Revoked: idle or absolute timeout
+  Active --> Revoked: refresh token reuse
+  Revoked --> Rejected: later JWT or refresh
+  Revoked --> [*]: purge after retention

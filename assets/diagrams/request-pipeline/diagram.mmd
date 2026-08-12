@@ -1,0 +1,19 @@
+flowchart TD
+  req[Incoming request]
+  fwd[Forwarded headers]
+  ex[Exception middleware]
+  https[HSTS / HTTPS redirect]
+  hdr[Security headers]
+  files[Static files / file storage]
+  route[Routing]
+  cors[CORS]
+  authn[Authentication]
+  current[Current user]
+  rl[Rate limiting]
+  authz[Authorization]
+  log[Request / response logging]
+  hang[Hangfire dashboard]
+  oai[OpenAPI]
+  ep[Controllers require auth<br/>health + SignalR hubs]
+
+  req --> fwd --> ex --> https --> hdr --> files --> route --> cors --> authn --> current --> rl --> authz --> log --> hang --> oai --> ep
