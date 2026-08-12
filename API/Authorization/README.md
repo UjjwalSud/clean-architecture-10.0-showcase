@@ -65,15 +65,15 @@ See [manage-roles screenshots](../../assets/screenshots/manage-roles/README.md).
 
 ## Evidence
 
-- [`API/src/Core/Shared/Authorization/SystemPermissions.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Shared/Authorization/SystemPermissions.cs)
-- [`API/src/Core/Shared/Authorization/SystemRoles.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Shared/Authorization/SystemRoles.cs)
-- [`API/src/Core/Shared/Authorization/SystemClaims.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Shared/Authorization/SystemClaims.cs)
-- [`API/src/Infrastructure/Auth/Permissions/MustHavePermissionAttribute.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Permissions/MustHavePermissionAttribute.cs)
-- [`API/src/Infrastructure/Auth/Permissions/PermissionPolicyProvider.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Permissions/PermissionPolicyProvider.cs)
-- [`API/src/Infrastructure/Auth/Permissions/PermissionRequirement.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Permissions/PermissionRequirement.cs)
-- [`API/src/Infrastructure/Auth/Permissions/PermissionAuthorizationHandler.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Permissions/PermissionAuthorizationHandler.cs)
-- [`API/src/Infrastructure/Nexus/Identity/UserService.Permissions.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Nexus/Identity/UserService.Permissions.cs)
-- [`API/src/Infrastructure/Nexus/Identity/RoleService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Nexus/Identity/RoleService.cs)
-- [`API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationRole.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationRole.cs)
-- [`API/src/Infrastructure/Auth/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Startup.cs)
-- [`API/src/Infrastructure/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Startup.cs) (`MapControllers().RequireAuthorization()`)
+- `API/src/Core/Shared/Authorization/SystemPermissions.cs`
+- `API/src/Core/Shared/Authorization/SystemRoles.cs`
+- `API/src/Core/Shared/Authorization/SystemClaims.cs`
+- `API/src/Infrastructure/Auth/Permissions/MustHavePermissionAttribute.cs`
+- `API/src/Infrastructure/Auth/Permissions/PermissionPolicyProvider.cs`
+- `API/src/Infrastructure/Auth/Permissions/PermissionRequirement.cs`
+- `API/src/Infrastructure/Auth/Permissions/PermissionAuthorizationHandler.cs`
+- `API/src/Infrastructure/Nexus/Identity/UserService.Permissions.cs`
+- `API/src/Infrastructure/Nexus/Identity/RoleService.cs`
+- `API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationRole.cs`
+- `API/src/Infrastructure/Auth/Startup.cs`
+- `API/src/Infrastructure/Startup.cs` (`MapControllers().RequireAuthorization()`)

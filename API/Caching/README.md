@@ -18,11 +18,11 @@ Caching is config-selected between local memory cache and distributed cache, wit
 
 ## Evidence
 
-- [`API/src/Infrastructure/Caching/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Caching/Startup.cs)
-- [`API/src/Infrastructure/Caching/LocalCacheService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Caching/LocalCacheService.cs)
-- [`API/src/Infrastructure/Caching/DistributedCacheService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Caching/DistributedCacheService.cs)
-- [`API/src/Infrastructure/Caching/CacheKeyService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Caching/CacheKeyService.cs)
-- [`API/src/Core/Application/Common/Caching/ICacheService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Application/Common/Caching/ICacheService.cs)
-- [`API/src/Core/Application/Common/Caching/ICacheKeyService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Application/Common/Caching/ICacheKeyService.cs)
-- [`API/src/Core/Application/Common/Caching/CacheKeys.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Application/Common/Caching/CacheKeys.cs)
-- [`API/src/Host/Configurations/cache.json`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Host/Configurations/cache.json)
+- `API/src/Infrastructure/Caching/Startup.cs`
+- `API/src/Infrastructure/Caching/LocalCacheService.cs`
+- `API/src/Infrastructure/Caching/DistributedCacheService.cs`
+- `API/src/Infrastructure/Caching/CacheKeyService.cs`
+- `API/src/Core/Application/Common/Caching/ICacheService.cs`
+- `API/src/Core/Application/Common/Caching/ICacheKeyService.cs`
+- `API/src/Core/Application/Common/Caching/CacheKeys.cs`
+- `API/src/Host/Configurations/cache.json`

@@ -29,10 +29,10 @@ The showcase is not “we use an AI editor.” It is **rules + reference modules
 
 ## Evidence
 
-- [`.cursor/AGENTS.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/AGENTS.md)
-- [`.cursor/docs/MODULE_OUTPUT_FORMAT.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/MODULE_OUTPUT_FORMAT.md)
-- [`.cursor/docs/REFERENCE_MODULES.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/REFERENCE_MODULES.md)
-- [`.cursor/docs/ANTI_PATTERNS.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/ANTI_PATTERNS.md)
+- `.cursor/AGENTS.md`
+- `.cursor/docs/MODULE_OUTPUT_FORMAT.md`
+- `.cursor/docs/REFERENCE_MODULES.md`
+- `.cursor/docs/ANTI_PATTERNS.md`
 
 ## Related documentation
 

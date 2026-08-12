@@ -55,12 +55,12 @@ See [manage-users screenshot notes](../../assets/screenshots/manage-users/README
 
 ## Evidence
 
-- [`FrontEnd/src/components/DataGrid/DataGridWithPagination.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/components/DataGrid/DataGridWithPagination.tsx)
-- [`FrontEnd/src/components/DataGrid/DataGridWithoutPagination.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/components/DataGrid/DataGridWithoutPagination.tsx)
-- [`FrontEnd/src/helpers/grid.helper.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/helpers/grid.helper.ts)
-- [`FrontEnd/src/components/grid.helper.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/components/grid.helper.tsx)
-- [`FrontEnd/src/hooks/agGrid.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/hooks/agGrid.ts)
-- [`FrontEnd/src/components/Pagination.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/components/Pagination.tsx)
-- [`FrontEnd/src/components/EmptyState.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/components/EmptyState.tsx)
-- [`FrontEnd/src/pages/ui/tables/DataTables.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/pages/ui/tables/DataTables.tsx) (gridjs template)
-- [`FrontEnd/package.json`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/package.json) (`ag-grid-*`, `gridjs*`)
+- `FrontEnd/src/components/DataGrid/DataGridWithPagination.tsx`
+- `FrontEnd/src/components/DataGrid/DataGridWithoutPagination.tsx`
+- `FrontEnd/src/helpers/grid.helper.ts`
+- `FrontEnd/src/components/grid.helper.tsx`
+- `FrontEnd/src/hooks/agGrid.ts`
+- `FrontEnd/src/components/Pagination.tsx`
+- `FrontEnd/src/components/EmptyState.tsx`
+- `FrontEnd/src/pages/ui/tables/DataTables.tsx` (gridjs template)
+- `FrontEnd/package.json` (`ag-grid-*`, `gridjs*`)

@@ -58,16 +58,16 @@ Order in `API/src/Infrastructure/Startup.cs` (`UseInfrastructure`):
 
 ## Evidence
 
-- [`API/src/Infrastructure/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Startup.cs)
-- [`API/src/Infrastructure/Https/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Https/Startup.cs)
-- [`API/src/Infrastructure/SecurityHeaders/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/SecurityHeaders/Startup.cs)
-- [`API/src/Infrastructure/Cors/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Cors/Startup.cs)
-- [`API/src/Infrastructure/Cors/CorsSettingsValidator.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Cors/CorsSettingsValidator.cs)
-- [`API/src/Infrastructure/RateLimiting/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/RateLimiting/Startup.cs)
-- [`API/src/Infrastructure/Middleware/ExceptionMiddleware.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Middleware/ExceptionMiddleware.cs)
-- [`API/src/Infrastructure/Middleware/ExceptionHandlingSettings.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Middleware/ExceptionHandlingSettings.cs)
-- [`API/src/Infrastructure/Middleware/ErrorResult.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Middleware/ErrorResult.cs)
-- [`API/src/Infrastructure/Middleware/RequestLoggingMiddleware.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Middleware/RequestLoggingMiddleware.cs)
-- [`API/src/Infrastructure/Middleware/ResponseLoggingMiddleware.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Middleware/ResponseLoggingMiddleware.cs)
-- [`API/src/Infrastructure/HealthChecks/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/HealthChecks/Startup.cs)
-- [`API/src/Host/Configurations/{httpssecurity,securityheaders,cors,ratelimit,exceptionhandling,middleware}.json`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Host/Configurations/{httpssecurity,securityheaders,cors,ratelimit,exceptionhandling,middleware}.json)
+- `API/src/Infrastructure/Startup.cs`
+- `API/src/Infrastructure/Https/Startup.cs`
+- `API/src/Infrastructure/SecurityHeaders/Startup.cs`
+- `API/src/Infrastructure/Cors/Startup.cs`
+- `API/src/Infrastructure/Cors/CorsSettingsValidator.cs`
+- `API/src/Infrastructure/RateLimiting/Startup.cs`
+- `API/src/Infrastructure/Middleware/ExceptionMiddleware.cs`
+- `API/src/Infrastructure/Middleware/ExceptionHandlingSettings.cs`
+- `API/src/Infrastructure/Middleware/ErrorResult.cs`
+- `API/src/Infrastructure/Middleware/RequestLoggingMiddleware.cs`
+- `API/src/Infrastructure/Middleware/ResponseLoggingMiddleware.cs`
+- `API/src/Infrastructure/HealthChecks/Startup.cs`
+- `API/src/Host/Configurations/{httpssecurity,securityheaders,cors,ratelimit,exceptionhandling,middleware}.json`

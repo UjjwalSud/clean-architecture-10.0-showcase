@@ -1,19 +1,11 @@
 # Contributing
 
-This repository is a **documentation showcase**. Content changes should improve accuracy, navigation, diagrams, or screenshots — not invent capabilities that are absent from the architecture source.
-
-## Source of truth
-
-Implementation lives in:
-
-[github.com/UjjwalSud/clean-architecture-10.0](https://github.com/UjjwalSud/clean-architecture-10.0)
-
-Before documenting a capability, verify it against that repository.
+This repository is a **documentation showcase** for a private reusable .NET 10 Clean Architecture foundation. Content changes should improve accuracy, navigation, diagrams, or screenshots — not invent capabilities that are absent from the private implementation.
 
 ## Guidelines
 
 - Prefer evidence-backed, concise technical writing.
-- Keep repository-relative path labels readable; link them to the architecture GitHub tree when useful.
+- Use repository-relative evidence paths such as `API/src/...`, `FrontEnd/src/...`, and `.cursor/...` (these refer to the private architecture; do not link a private GitHub tree).
 - Do not publish secrets, demo passwords, tokens, connection strings, or private customer data.
 - Do not copy full `.cursor` prompts/rules into this showcase; see [Cursor Sanitization Policy](../Cursor/Sanitization-Policy/README.md).
 - Screenshots must remain public-safe (seeded/demo data only).

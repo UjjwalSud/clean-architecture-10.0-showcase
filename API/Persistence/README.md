@@ -31,19 +31,19 @@ Diagrams: [Audit trail + soft delete](../../assets/diagrams/audit-soft-delete/RE
 
 ## Evidence
 
-- [`API/src/Infrastructure/Persistence/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Startup.cs)
-- [`API/src/Infrastructure/Persistence/Context/ApplicationDbContext.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Context/ApplicationDbContext.cs)
-- [`API/src/Infrastructure/Persistence/Context/BaseDbContext.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Context/BaseDbContext.cs)
-- [`API/src/Infrastructure/Persistence/Context/Nexus/NexusDbContext.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Context/Nexus/NexusDbContext.cs)
-- [`API/src/Infrastructure/Persistence/Context/Nexus/NexusBaseDbContext.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Context/Nexus/NexusBaseDbContext.cs)
-- [`API/src/Infrastructure/Persistence/Context/Auditing/AuditingDbContext.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Context/Auditing/AuditingDbContext.cs)
-- [`API/src/Core/Domain/Common/Contracts/ISoftDelete.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Domain/Common/Contracts/ISoftDelete.cs)
-- [`API/src/Core/Domain/Common/Contracts/IAuditableEntity.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Domain/Common/Contracts/IAuditableEntity.cs)
-- [`API/src/Infrastructure/Auditing/AuditTrail.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auditing/AuditTrail.cs)
-- [`API/src/Infrastructure/Auditing/Trail.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auditing/Trail.cs)
-- [`API/src/Infrastructure/Persistence/Initialization/DatabaseInitializer.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Initialization/DatabaseInitializer.cs)
-- [`API/src/Infrastructure/Persistence/Initialization/ApplicationDbInitializer.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Initialization/ApplicationDbInitializer.cs)
-- [`API/src/Infrastructure/Persistence/Initialization/ApplicationDbSeeder.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Persistence/Initialization/ApplicationDbSeeder.cs)
-- [`API/src/Migrators/Migrators.MSSQL/`](https://github.com/UjjwalSud/clean-architecture-10.0/tree/main/API/src/Migrators/Migrators.MSSQL/)
-- [`API/src/Migrators/Migrators.PostgreSQL/`](https://github.com/UjjwalSud/clean-architecture-10.0/tree/main/API/src/Migrators/Migrators.PostgreSQL/)
-- [`API/src/Host/Program.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Host/Program.cs)
+- `API/src/Infrastructure/Persistence/Startup.cs`
+- `API/src/Infrastructure/Persistence/Context/ApplicationDbContext.cs`
+- `API/src/Infrastructure/Persistence/Context/BaseDbContext.cs`
+- `API/src/Infrastructure/Persistence/Context/Nexus/NexusDbContext.cs`
+- `API/src/Infrastructure/Persistence/Context/Nexus/NexusBaseDbContext.cs`
+- `API/src/Infrastructure/Persistence/Context/Auditing/AuditingDbContext.cs`
+- `API/src/Core/Domain/Common/Contracts/ISoftDelete.cs`
+- `API/src/Core/Domain/Common/Contracts/IAuditableEntity.cs`
+- `API/src/Infrastructure/Auditing/AuditTrail.cs`
+- `API/src/Infrastructure/Auditing/Trail.cs`
+- `API/src/Infrastructure/Persistence/Initialization/DatabaseInitializer.cs`
+- `API/src/Infrastructure/Persistence/Initialization/ApplicationDbInitializer.cs`
+- `API/src/Infrastructure/Persistence/Initialization/ApplicationDbSeeder.cs`
+- `API/src/Migrators/Migrators.MSSQL/`
+- `API/src/Migrators/Migrators.PostgreSQL/`
+- `API/src/Host/Program.cs`

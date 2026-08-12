@@ -54,11 +54,11 @@ Server/API domain data for Orbit screens is generally fetched in page/services c
 
 ## Evidence
 
-- [`FrontEnd/src/redux/store.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/redux/store.ts)
-- [`FrontEnd/src/redux/sagas.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/redux/sagas.ts)
-- [`FrontEnd/src/redux/auth/saga.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/redux/auth/saga.ts)
-- [`FrontEnd/src/redux/auth/reducers.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/redux/auth/reducers.ts)
-- [`FrontEnd/src/redux/auth/actions.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/redux/auth/actions.ts)
-- [`FrontEnd/src/redux/layout/reducers.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/redux/layout/reducers.ts)
-- [`FrontEnd/src/helpers/api/apiCore.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/helpers/api/apiCore.ts)
-- [`FrontEnd/src/hooks/usePermission.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/hooks/usePermission.ts)
+- `FrontEnd/src/redux/store.ts`
+- `FrontEnd/src/redux/sagas.ts`
+- `FrontEnd/src/redux/auth/saga.ts`
+- `FrontEnd/src/redux/auth/reducers.ts`
+- `FrontEnd/src/redux/auth/actions.ts`
+- `FrontEnd/src/redux/layout/reducers.ts`
+- `FrontEnd/src/helpers/api/apiCore.ts`
+- `FrontEnd/src/hooks/usePermission.ts`

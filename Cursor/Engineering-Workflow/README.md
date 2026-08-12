@@ -2,7 +2,7 @@
 
 Derived from `.cursor/AGENTS.md`, module output format, reference modules, and prompt templates. The intended flow is **understand → plan → validate against rules → implement narrowly → verify**, not “generate everything first.”
 
-This workflow is the project-level application of patterns from the reusable **[ai-engineering-system](https://github.com/UjjwalSud/ai-engineering-system)** (planning conventions, stack guidance, and engineering controls), specialized for [clean-architecture-10.0](https://github.com/UjjwalSud/clean-architecture-10.0).
+This workflow is the project-level application of patterns from the reusable **[ai-engineering-system](https://github.com/UjjwalSud/ai-engineering-system)** (planning conventions, stack guidance, and engineering controls), specialized for the private Clean Architecture foundation represented by this showcase.
 
 Related: [Curated Rules](../Rules-Curated/README.md) · [Sanitization Policy](../Sanitization-Policy/README.md) · [Cursor overview](../README.md)
 
@@ -53,12 +53,12 @@ Full prompt bodies are **not** published (see [Sanitization Policy](../Sanitizat
 
 ## Evidence
 
-Paths in [clean-architecture-10.0](https://github.com/UjjwalSud/clean-architecture-10.0):
+Paths refer to the private source architecture represented by this showcase:
 
-- [`.cursor/AGENTS.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/AGENTS.md)
-- [`.cursor/docs/MODULE_OUTPUT_FORMAT.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/MODULE_OUTPUT_FORMAT.md)
-- [`.cursor/docs/REFERENCE_MODULES.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/REFERENCE_MODULES.md)
-- [`.cursor/docs/ANTI_PATTERNS.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/ANTI_PATTERNS.md)
-- [`.cursor/docs/01_SYSTEM_ARCHITECTURE.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/01_SYSTEM_ARCHITECTURE.md)
-- [`.cursor/prompts/`](https://github.com/UjjwalSud/clean-architecture-10.0/tree/main/.cursor/prompts) (existence documented; full prompt bodies not published — see [Sanitization Policy](../Sanitization-Policy/README.md))
+- `.cursor/AGENTS.md`
+- `.cursor/docs/MODULE_OUTPUT_FORMAT.md`
+- `.cursor/docs/REFERENCE_MODULES.md`
+- `.cursor/docs/ANTI_PATTERNS.md`
+- `.cursor/docs/01_SYSTEM_ARCHITECTURE.md`
+- `.cursor/prompts/` (existence documented; full prompt bodies not published — see [Sanitization Policy](../Sanitization-Policy/README.md))
 - `.cursor/rules/new-module-creation.mdc` (summary only; full file not published)

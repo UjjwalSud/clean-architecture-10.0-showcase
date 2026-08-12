@@ -1,6 +1,6 @@
 # Cursor / AI-Assisted Engineering
 
-This section shows how the architecture repository uses Cursor as a **governed engineering assistant**: rules, architecture docs, reference modules, and plan-first prompts steer changes toward existing Clean Architecture conventions.
+This section shows how the private architecture foundation uses Cursor as a **governed engineering assistant**: rules, architecture docs, reference modules, and plan-first prompts steer changes toward existing Clean Architecture conventions.
 
 It does not claim that AI replaces design review. It documents the controls that keep AI-assisted edits consistent with the codebase.
 
@@ -8,7 +8,7 @@ The reusable patterns behind this approach are developed and shared in:
 
 **[ai-engineering-system](https://github.com/UjjwalSud/ai-engineering-system)**
 
-This project’s `.cursor` tree is a **project-specific application** of that broader system (architecture docs, stack rules, prompts), specialized for [clean-architecture-10.0](https://github.com/UjjwalSud/clean-architecture-10.0).
+This project’s `.cursor` tree is a **project-specific application** of that broader system (architecture docs, stack rules, prompts), specialized for the private Clean Architecture foundation represented by this showcase.
 
 ## Why `.cursor` matters here
 
@@ -41,14 +41,13 @@ Diagram: [Cursor engineering workflow](../assets/diagrams/cursor-engineering-wor
 
 - [API Showcase](../API/README.md)
 - [FrontEnd Showcase](../FrontEnd/README.md)
-- [Architecture source](https://github.com/UjjwalSud/clean-architecture-10.0)
 - [AI engineering system](https://github.com/UjjwalSud/ai-engineering-system)
 
-## Evidence (source of governance)
+## Evidence
 
-Paths below are in the architecture repository:
+Paths refer to the private source architecture represented by this showcase:
 
-- [`.cursor/AGENTS.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/AGENTS.md)
-- [`.cursor/rules/`](https://github.com/UjjwalSud/clean-architecture-10.0/tree/main/.cursor/rules)
-- [`.cursor/docs/`](https://github.com/UjjwalSud/clean-architecture-10.0/tree/main/.cursor/docs)
-- [`.cursor/prompts/`](https://github.com/UjjwalSud/clean-architecture-10.0/tree/main/.cursor/prompts)
+- `.cursor/AGENTS.md`
+- `.cursor/rules/`
+- `.cursor/docs/`
+- `.cursor/prompts/`

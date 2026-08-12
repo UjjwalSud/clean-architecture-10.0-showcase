@@ -1,10 +1,14 @@
 # Clean Architecture 10.0 Showcase
 
-Public technical showcase for the **.NET 10 Clean Architecture** solution at:
+This repository is a public technical showcase of a **private .NET 10 Clean Architecture foundation** used as a reusable starting point for modern .NET and React applications.
 
-**[github.com/UjjwalSud/clean-architecture-10.0](https://github.com/UjjwalSud/clean-architecture-10.0)**
+It documents verified capabilities, security and multi-tenancy design, frontend architecture, diagrams, UI examples, and an AI-assisted engineering workflow — without publishing the reusable implementation itself.
 
-This repository documents and illustrates that architecture. It does **not** contain the application source — the runnable API and React SPA live in the architecture repository above.
+The underlying implementation is intentionally private. This repository focuses on architecture, verified capabilities, diagrams, UI examples, and engineering practices.
+
+## Development acceleration
+
+The private foundation already solves common infrastructure concerns (authentication/session security, authorization, multi-tenancy, persistence, jobs, caching, file storage, integrations, observability, and shared FrontEnd patterns). New product work can start from those established patterns instead of rebuilding the same platform pieces for every application, and focus sooner on domain and business requirements. It is suitable as a starting architecture for SaaS and business applications.
 
 ## Architecture
 
@@ -51,6 +55,8 @@ flowchart TB
 
 Deeper diagrams: [solution project dependencies](./assets/diagrams/solution-project-dependencies/README.md) · [overall Clean Architecture](./assets/diagrams/overall-clean-architecture/README.md)
 
+Evidence paths throughout this showcase (for example `API/src/...`, `FrontEnd/src/...`, `.cursor/...`) refer to files in the private source architecture represented here.
+
 ## Major capabilities
 
 | Area | What is implemented |
@@ -95,18 +101,21 @@ Full gallery: [assets/screenshots](./assets/screenshots/README.md)
 
 | Repository | Role |
 |------------|------|
-| [clean-architecture-10.0](https://github.com/UjjwalSud/clean-architecture-10.0) | **Architecture source** — the .NET API and React SPA this showcase documents |
-| [ai-engineering-system](https://github.com/UjjwalSud/ai-engineering-system) | **Reusable AI engineering system** — rules, prompts, stack guidance, planning conventions, and workflow patterns applied across projects |
-| [clean-architecture-10.0-showcase](https://github.com/UjjwalSud/clean-architecture-10.0-showcase) | **This repository** — public explanation, diagrams, and UI evidence |
+| [ai-engineering-system](https://github.com/UjjwalSud/ai-engineering-system) | Public reusable AI-assisted engineering system — rules, prompts, stack guidance, planning conventions, and workflow patterns |
+| [clean-architecture-10.0-showcase](https://github.com/UjjwalSud/clean-architecture-10.0-showcase) | This public showcase — architecture explanation, diagrams, and UI evidence |
 
 Relationship in short:
 
 ```text
-ai-engineering-system          → reusable AI-assisted engineering guidance
-        ↓ (applied / specialized)
-clean-architecture-10.0        → concrete architecture implementation
+ai-engineering-system            → reusable AI-assisted engineering guidance
+        ↓ (applied to a private foundation)
+private .NET 10 Clean Architecture → concrete reusable implementation
         ↓ (documented by)
-clean-architecture-10.0-showcase → public technical showcase
+clean-architecture-10.0-showcase → this public technical showcase
 ```
 
 This project’s `.cursor` setup is a **project-specific application** of that broader engineering approach — not a verbatim copy of every rule from `ai-engineering-system`.
+
+## Contact
+
+If you're building a .NET/React application and are interested in using this architecture as a foundation, feel free to reach out through my [GitHub profile](https://github.com/UjjwalSud).

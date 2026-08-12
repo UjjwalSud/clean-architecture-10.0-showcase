@@ -76,10 +76,10 @@ Highlights documented there include EF Core, Hangfire, Serilog, NSwag, JWT beare
 
 ## Evidence (composition)
 
-- [`API/src/Host/Program.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Host/Program.cs)
-- [`API/src/Infrastructure/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Startup.cs)
-- [`API/src/Host/Configurations/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Host/Configurations/Startup.cs)
-- [`.cursor/docs/01_SYSTEM_ARCHITECTURE.md`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/.cursor/docs/01_SYSTEM_ARCHITECTURE.md) (source-architecture factual reference)
+- `API/src/Host/Program.cs`
+- `API/src/Infrastructure/Startup.cs`
+- `API/src/Host/Configurations/Startup.cs`
+- `.cursor/docs/01_SYSTEM_ARCHITECTURE.md` (architecture reference used by the private foundation)
 
 Diagrams: [Overall Clean Architecture](../assets/diagrams/overall-clean-architecture/README.md) · [Request pipeline](../assets/diagrams/request-pipeline/README.md) · [all diagrams](../assets/diagrams/README.md)
 

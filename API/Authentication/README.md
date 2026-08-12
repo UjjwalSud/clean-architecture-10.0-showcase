@@ -101,15 +101,15 @@ Documented reason codes include logout, logout-all, password change/reset, user 
 
 ## Evidence
 
-- [`API/src/Infrastructure/Auth/Jwt/ConfigureJwtBearerOptions.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Jwt/ConfigureJwtBearerOptions.cs)
-- [`API/src/Infrastructure/Auth/Jwt/Startup.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Jwt/Startup.cs)
-- [`API/src/Infrastructure/Auth/Jwt/JwtSettings.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/Jwt/JwtSettings.cs)
-- [`API/src/Infrastructure/Auth/SessionSecuritySettings.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Auth/SessionSecuritySettings.cs)
-- [`API/src/Infrastructure/Nexus/Identity/TokenService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Nexus/Identity/TokenService.cs)
-- [`API/src/Infrastructure/Nexus/Identity/RefreshTokenHasher.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Nexus/Identity/RefreshTokenHasher.cs)
-- [`API/src/Infrastructure/Nexus/Identity/UserSessionService.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Nexus/Identity/UserSessionService.cs)
-- [`API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationUserSession.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationUserSession.cs)
-- [`API/src/Core/Application/Nexus/Identity/Sessions/UserSessionRevocationReasons.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Core/Application/Nexus/Identity/Sessions/UserSessionRevocationReasons.cs)
-- [`API/src/Host/Controllers/Identity/TokensController.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Host/Controllers/Identity/TokensController.cs)
-- [`API/src/Host/Configurations/security.json`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Host/Configurations/security.json)
-- [`API/src/Infrastructure/Logging/Security/SecurityEventNames.cs`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/API/src/Infrastructure/Logging/Security/SecurityEventNames.cs)
+- `API/src/Infrastructure/Auth/Jwt/ConfigureJwtBearerOptions.cs`
+- `API/src/Infrastructure/Auth/Jwt/Startup.cs`
+- `API/src/Infrastructure/Auth/Jwt/JwtSettings.cs`
+- `API/src/Infrastructure/Auth/SessionSecuritySettings.cs`
+- `API/src/Infrastructure/Nexus/Identity/TokenService.cs`
+- `API/src/Infrastructure/Nexus/Identity/RefreshTokenHasher.cs`
+- `API/src/Infrastructure/Nexus/Identity/UserSessionService.cs`
+- `API/src/Infrastructure/Nexus/Identity/DbModels/ApplicationUserSession.cs`
+- `API/src/Core/Application/Nexus/Identity/Sessions/UserSessionRevocationReasons.cs`
+- `API/src/Host/Controllers/Identity/TokensController.cs`
+- `API/src/Host/Configurations/security.json`
+- `API/src/Infrastructure/Logging/Security/SecurityEventNames.cs`

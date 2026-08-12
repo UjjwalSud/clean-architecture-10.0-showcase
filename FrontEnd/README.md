@@ -60,11 +60,11 @@ Screenshots: [Screenshots index](../assets/screenshots/README.md)
 
 ## Evidence (composition)
 
-- [`FrontEnd/src/index.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/index.tsx)
-- [`FrontEnd/src/App.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/App.tsx)
-- [`FrontEnd/src/routes/Routes.tsx`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/routes/Routes.tsx)
-- [`FrontEnd/src/helpers/api/apiCore.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/helpers/api/apiCore.ts)
-- [`FrontEnd/src/helpers/api/httpClient.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/helpers/api/httpClient.ts)
-- [`FrontEnd/src/helpers/api/apiClients.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/helpers/api/apiClients.ts)
-- [`FrontEnd/src/redux/store.ts`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/src/redux/store.ts)
-- [`FrontEnd/package.json`](https://github.com/UjjwalSud/clean-architecture-10.0/blob/main/FrontEnd/package.json)
+- `FrontEnd/src/index.tsx`
+- `FrontEnd/src/App.tsx`
+- `FrontEnd/src/routes/Routes.tsx`
+- `FrontEnd/src/helpers/api/apiCore.ts`
+- `FrontEnd/src/helpers/api/httpClient.ts`
+- `FrontEnd/src/helpers/api/apiClients.ts`
+- `FrontEnd/src/redux/store.ts`
+- `FrontEnd/package.json`
