@@ -65,7 +65,7 @@ Evidence paths throughout this showcase (for example `API/src/...`, `FrontEnd/sr
 | FrontEnd | React 19 + TypeScript SPA (Vite), NSwag clients, Redux Toolkit + Saga |
 | Authentication | Session-bound JWT, refresh-token hashing + rotation, reuse revocation, idle/absolute timeouts; optional Email/Authenticator 2FA |
 | Authorization | Permission policies from DB role claims (not JWT-embedded permissions) |
-| Multi-tenancy / SaaS foundation | Multi-layer isolation plus tenant admin, default/free subscription assignment, Stripe upgrade path |
+| Multi-tenancy / SaaS foundation | Multi-layer isolation plus tenant admin, default/free subscription assignment, Stripe upgrade path; centralized Application + Nexus reference-data lookups |
 | Persistence | EF Core, multi-DbContext layout, soft delete, auditing; SQL Server migrations shipped |
 | Background jobs | Hangfire on SQL Server storage (filters, recurring session purge) |
 | Caching | Local / distributed-memory cache with tenant-prefixed keys (Redis wiring present but not active) |

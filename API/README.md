@@ -57,6 +57,10 @@ See [OpenAPI / NSwag](./OpenApi-NSwag/README.md) and [Technology & Libraries](./
 
 Reusable tenant + subscription-oriented building blocks (default/free plan assignment, Stripe upgrade path, Root Manage Tenants) are summarized in [Platform Foundation](./Platform-Foundation/README.md).
 
+### Centralized reference data (LookUps)
+
+Application (Orbit) and Nexus (platform) lookup catalogs provide typed reference values for dropdowns and admin maintenance so modules do not each invent their own lookup tables. Admin vs dropdown surfaces, caching, and tenant/global scope are documented under [Platform Foundation — LookUps](./Platform-Foundation/README.md#centralized-reference-data-lookups).
+
 ### Controllers and services
 
 - Controllers live under `API/src/Host/Controllers/` and stay thin: they call Application service interfaces.
@@ -80,7 +84,7 @@ Highlights documented there include EF Core, Hangfire, Serilog, NSwag, JWT beare
 | [Authentication](./Authentication/README.md) | Session-bound JWT, refresh rotation/reuse, idle/absolute timeouts, 2FA/authenticator |
 | [Authorization](./Authorization/README.md) | Permissions, dynamic policies, role claims, tenant-scoped roles |
 | [MultiTenancy](./MultiTenancy/README.md) | Multi-layer tenant isolation (token, session, EF, Nexus, cache, SignalR) |
-| [Platform-Foundation](./Platform-Foundation/README.md) | Tenants, subscriptions, Stripe upgrade path, Root admin surfaces |
+| [Platform-Foundation](./Platform-Foundation/README.md) | Tenants, subscriptions, Stripe upgrade path, Root admin, Application/Nexus lookups |
 | [Observability](./Observability/README.md) | Serilog, security events, audit redaction, ErrorId, health checks |
 | [Persistence](./Persistence/README.md) | Multi-DbContext layout, soft delete, auditing, migrators |
 | [BackgroundJobs](./BackgroundJobs/README.md) | Hangfire storage, filters, recurring purge job |

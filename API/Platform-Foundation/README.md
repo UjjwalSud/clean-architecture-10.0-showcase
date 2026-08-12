@@ -17,6 +17,23 @@ Related: [Multi-Tenancy](../MultiTenancy/README.md) · [Integrations](../Integra
 | Stripe path | Customer linkage, payment intents, webhooks assigning plans, invoice download |
 | FrontEnd surfaces | Buy subscription plan, my-subscriptions, subscription status gating, Manage Tenants edit tabs |
 | Settings (Orbit) | Tenant-scoped appointment/approved-appointment settings — product config, not billing catalog |
+| Reference data (LookUps) | Dual catalogs: **Application** (Orbit/tenant DB) and **Nexus** (platform DB); typed codes + admin + dropdown APIs |
+
+## Centralized reference data (LookUps)
+
+Common dropdown/reference values are not reinvented per module. Two parallel catalogs share the same shape (code → values with display order / active / default) but live in different DbContexts:
+
+| Catalog | Persistence | Typed dispatch | Admin API | Runtime dropdown API |
+|---------|-------------|----------------|-----------|----------------------|
+| **Application** | `ApplicationDbContext` (`LookUpCodes` / `LookUpCodeValues`) | `LookUpCodeTypes` | Versioned `LookUpController` + `ManageLookUps` permissions | `DataControllers` `drp-get-look-up-values` |
+| **Nexus / platform** | `NexusDbContext` (`NexusLookUpCodes` / `NexusLookUpCodeValues`) | `NexusLookUpCodeTypes` | Versioned `NexusLookUpController` (`nexus-lookup`) + `ManageNexusLookUps` | `DataControllers` `drp-nexus-get-look-up-values` |
+
+- Admin endpoints require Manage* permissions. Dropdown endpoints on `DataControllers` are authenticated (host default authorize) but **not** gated by ManageLookUps — modules can read values without admin rights.
+- Application lookups inherit Application EF tenant filtering (auditable entities). Nexus dropdown cache uses a **global** cache key (`includeTenantId: false`) — platform shared values, not per-tenant packs.
+- Nexus dropdown reads are cached (`ICacheService` / `CacheKeys.NexusLookUpValuesByCode`); create/update refreshes that cache. Application `LookUpService` dropdown reads hit the DB (no equivalent cache path verified).
+- Seeded product usage today is thin: Nexus `UserTimeZone` is consumed in user/appointment UI; Application enum types include placeholders (`Temp` / `Temp1`) awaiting product-specific codes.
+
+FrontEnd consumption: [State](../../FrontEnd/State/README.md) (`DropDownService`, not Redux).
 
 ## Lifecycle sketch (verified)
 
@@ -46,3 +63,11 @@ Tenant created (seed or registration)
 - `FrontEnd/src/pages/orbit/buy-subscription-plan/`
 - `FrontEnd/src/pages/orbit/my-subscriptions/`
 - `FrontEnd/src/pages/auth/SubscriptionStatus.tsx`
+- `API/src/Host/Controllers/LookUp/LookUpController.cs`
+- `API/src/Host/Controllers/LookUp/NexusLookUpController.cs`
+- `API/src/Host/Controllers/DataControllers.cs`
+- `API/src/Infrastructure/Orbit/LookUp/LookUpService.cs`
+- `API/src/Infrastructure/Nexus/Lookup/NexusLookUpService.cs`
+- `FrontEnd/src/services/DropDownService.ts`
+- `FrontEnd/src/pages/orbit/manage-lookups/`
+- `FrontEnd/src/pages/orbit/manage-nexus-lookups/`

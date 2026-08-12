@@ -53,6 +53,7 @@ These product screens illustrate shared UI patterns (not separate architecture p
 | Manage Tenants | Root-only grid + tabbed edit — [Tenant Administration](../Tenant-Administration/README.md) |
 | Manage Settings | Tenant Orbit settings (Appointment / ApprovedAppointment) with nested editors and tabbed landing — forms that are **not** always VerticalForm wrappers |
 | Manage Language | Localization admin — see [API Localization](../../API/Localization/README.md) |
+| Manage Lookups / Nexus Lookups | Typed reference-data admin — see [Platform Foundation — LookUps](../../API/Platform-Foundation/README.md#centralized-reference-data-lookups) |
 | Email Log / Templates | Mail admin surfaces — see [API Mailing](../../API/Mailing/README.md) |
 
 Settings is a real administration feature for appointment-related configuration. It does not introduce a generic “settings framework” beyond service + controller + Orbit UI composition. Sensitive business config values are not documented here.

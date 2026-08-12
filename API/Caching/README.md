@@ -7,8 +7,9 @@ Caching is config-selected between local memory cache and distributed cache, wit
 - **Local cache** — when distributed cache is off, `LocalCacheService` uses `IMemoryCache`.
 - **Distributed cache** — when enabled, `DistributedCacheService` uses `IDistributedCache` plus serializer; with Redis preference off, registration uses `AddDistributedMemoryCache()`.
 - **Redis note** — Redis registration code is present but commented out; no Redis package is active in Infrastructure.
-- **Tenant-prefixed keys** — `CacheKeyService` builds keys as `{tenantUniqueId}-{CacheKey}-{id}` (or `GLOBAL-â€¦` when tenant inclusion is disabled).
+- **Tenant-prefixed keys** — `CacheKeyService` builds keys as `{tenantUniqueId}-{CacheKey}-{id}` (or `GLOBAL-…` when tenant inclusion is disabled).
 - **Shared contract** — Application defines `ICacheService` / `ICacheKeyService` and cache key names such as permissions and Nexus lookup values.
+- **Nexus lookup dropdown cache** — `NexusLookUpService` caches all Nexus lookup values under a **global** key (`includeTenantId: false`) for dropdown/default-value reads; admin create/update clears and refills. Application `LookUpService` does not use this cache path.
 - **Default sliding expiry** — local/distributed implementations use a short default sliding window (10 minutes in current services).
 
 ## Configuration

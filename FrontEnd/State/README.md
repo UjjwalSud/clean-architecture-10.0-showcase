@@ -43,6 +43,14 @@ RootState {
 
 Server/API domain data for Orbit screens is generally fetched in page/services code via NSwag clients; it is **not** mirrored into additional Redux slices in this architecture.
 
+## Centralized lookups (not Redux)
+
+Reference-data dropdowns use **`DropDownService`** over `DataControllers` (`getLookUpCodeValues` / `getNexusLookUpCodeValues`), keyed by `LookUpCodeTypes` / `NexusLookUpCodeTypes`. Values are loaded **on demand** in forms (users, profile, appointments) — not preloaded into Redux after login.
+
+Admin catalogs (`LookUpService` / `NexusLookUpService` + Manage Lookups / Manage Nexus Lookups pages) use the versioned LookUp APIs and Manage* permissions. Runtime dropdown calls do not require those admin permissions.
+
+API/platform detail: [Platform Foundation — LookUps](../../API/Platform-Foundation/README.md#centralized-reference-data-lookups).
+
 ## What is not in Redux
 
 | Concern | Location |
@@ -51,6 +59,7 @@ Server/API domain data for Orbit screens is generally fetched in page/services c
 | Silent 401 refresh | `httpClient` / `sessionRefreshQueue` |
 | Idle activity timer | `useIdleSessionTimeout` (layout) |
 | Cross-tab logout signal | `localStorage` timestamp |
+| Lookup / dropdown reference data | `DropDownService` + page-local fetch (not Auth/Layout) |
 
 ## Evidence
 
@@ -62,3 +71,8 @@ Server/API domain data for Orbit screens is generally fetched in page/services c
 - `FrontEnd/src/redux/layout/reducers.ts`
 - `FrontEnd/src/helpers/api/apiCore.ts`
 - `FrontEnd/src/hooks/usePermission.ts`
+- `FrontEnd/src/services/DropDownService.ts`
+- `FrontEnd/src/services/LookUpService.ts`
+- `FrontEnd/src/services/NexusLookUpService.ts`
+- `FrontEnd/src/pages/orbit/manage-lookups/`
+- `FrontEnd/src/pages/orbit/manage-nexus-lookups/`

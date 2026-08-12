@@ -23,7 +23,7 @@ React SPA documentation for the product UI that consumes the Clean Architecture 
 | `src/redux/` | Auth workflows + layout chrome state |
 | `src/pages/orbit/` | Product features (users, roles, tenants, appointments, forms, …) |
 | `src/pages/{auth,ui,apps,…}/` | Auth screens and template/demo surfaces |
-| `src/components/` / `src/hooks/` | Shared UI and hooks (permissions, idle timeout, â€¦) |
+| `src/components/` / `src/hooks/` | Shared UI and hooks (permissions, idle timeout, …) |
 
 ### How the pieces connect
 
@@ -31,6 +31,7 @@ React SPA documentation for the product UI that consumes the Clean Architecture 
 - **API integration** uses NSwag Fetch clients wired to a shared `authenticatedFetch` that attaches Bearer tokens and handles 401 refresh/retry.
 - **Authentication/session** stores the login payload in `sessionStorage` and aligns with the API's [session-bound JWT](../API/Authentication/README.md) model (backend still validates session on each request).
 - **State** keeps Auth/Layout in Redux; tokens and session fields remain in `sessionStorage` via `APICore`.
+- **Lookups / reference data** are consumed on demand via `DropDownService` (Application + Nexus types), not stored in Redux — see [State](./State/README.md) and [API Platform Foundation](../API/Platform-Foundation/README.md#centralized-reference-data-lookups).
 
 ## Technology & Libraries
 
